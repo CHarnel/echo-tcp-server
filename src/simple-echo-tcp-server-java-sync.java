@@ -10,7 +10,7 @@ import java.nio.channels.SocketChannel;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class TcpServer {
+public class Example {
     public void start() {
         ExecutorService executor = Executors.newCachedThreadPool();
         int port = 2424;

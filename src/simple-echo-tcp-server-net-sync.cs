@@ -3,8 +3,7 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 
 namespace SomeServerApplication
-{
-    class TcpServer
+{    class Example
     {
         public void Start()
         {
