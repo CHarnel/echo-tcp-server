@@ -3,10 +3,9 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 
 namespace SomeServerApplication
-{
-    class Program
+{    class Example
     {
-        static void Main(string[] args)
+        public void Start()
         {
             var port = 2424;
             var listener = TcpListener.Create(port);
@@ -19,7 +18,7 @@ namespace SomeServerApplication
                 {
                     using (var stream = client.GetStream())
                     using (var reader = new StreamReader(stream))
-                    using (var writer = new StreamWriter(stream) {AutoFlush = true})
+                    using (var writer = new StreamWriter(stream) { AutoFlush = true })
                         while (client.Connected)
                         {
                             try

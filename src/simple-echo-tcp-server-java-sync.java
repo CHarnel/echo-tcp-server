@@ -1,4 +1,4 @@
-package com.echoserverexample;
+package com.echoserver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,9 +10,8 @@ import java.nio.channels.SocketChannel;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Main {
-
-    public static void main(String[] args) {
+public class Example {
+    public void start() {
         ExecutorService executor = Executors.newCachedThreadPool();
         int port = 2424;
         ServerSocketChannel server = null;

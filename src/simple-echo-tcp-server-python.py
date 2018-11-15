@@ -28,7 +28,4 @@ def start_server():
     while True:
         connection, address = s.accept()
         start_new_thread(client_connect, (connection,))
-
-
-if __name__ == "__main__":
-    start_server()
+        
