@@ -15,11 +15,12 @@ const server = net.createServer(function(socket) {
       socket.write(response);
     } catch (err) {
         console.error(err);
+        socket.write(`${err.name}: ${err.message}\r\n`);
     }
   });
 
   socket.on('error',function(error){
-    console.log('Error : ' + error);
+    console.log('Error: ' + error);
   });
 
   socket.on('end', function (){
