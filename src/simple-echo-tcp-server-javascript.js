@@ -15,7 +15,8 @@ const server = net.createServer(function(socket) {
       socket.write(response);
     } catch (err) {
         console.error(err);
-        socket.write(`${err.name}: ${err.message}\r\n`);
+        socket.destroy();
+        throw err;
     }
   });
 
